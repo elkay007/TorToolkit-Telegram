@@ -1,3 +1,4 @@
+import os
 try:
     from .ExecVars import ExecVars
 except:
@@ -8,7 +9,7 @@ except:
         API_HASH = "3f14c6c573776352ff8f52db43b3dfed"
         API_ID = 3120201
         BOT_TOKEN = "1631299984:AAGR3-NWrnClYwS7RSDAAsHsWkbN4L59Xcc"
-        BASE_URL_OF_BOT = "https://tottk.me"
+        BASE_URL_OF_BOT = "https://lktorxbot.herokuapp.com"
 
         # Edit the server port if you want to keep it default though.
         SERVPORT = 80
@@ -35,7 +36,7 @@ except:
         REMAINING_STR = "▱"
 
         # DB URI for access
-        DB_URI = "dbname=tortk user=postgres password=112233 host=127.0.0.1 port=5432"
+        DB_URI = os.environ.get("DATABASE_URL")
         
         # UNCOMMENT THE BELOW LINE WHEN USING CONTAINER AND COMMENT THE UPPER LINE
         #DB_URI = "dbname=tortk user=postgres password=your-pass host=db port=5432"
